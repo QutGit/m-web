@@ -1,0 +1,31 @@
+@mixin border($width: 1px,$color: $black, $direction: null, $type: solid ) {
+  position: relative;
+  &::before{
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 200%;
+    height: 200%;
+    @if $direction {
+      border-#{$direction}:$width $type $color!important;
+    } @else {
+      border:$width $type $color;
+    }
+    color: $color;
+    transform-origin: left top;
+    transform: scale(0.5);
+    pointer-events: none; /* 防止点击触发 */
+    box-sizing: border-box;
+    @media screen and (min-device-pixel-ratio:2){
+      width: 300%;
+      height: 300%;
+      transform: scale(0.5);
+    }
+    @media screen and (min-device-pixel-ratio:3){
+      width: 200%;
+      height: 200%;
+      transform: scale(0.33);
+    }
+  }
+}

@@ -1,0 +1,9 @@
+@import './pcss/color.css';
+
+.text-black {
+  color: var(--black) !important;
+}
+
+.text-blue {
+  color: var(--blue) !important;
+}

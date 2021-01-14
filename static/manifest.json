@@ -1,0 +1,15 @@
+{
+  "name": "vw-layout",
+  "short_name": "vw-layout",
+  "start_url": "../index.html",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#4DBA87",
+  "icons": [
+    {
+      "src": "./favicon.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    }
+  ]
+}
